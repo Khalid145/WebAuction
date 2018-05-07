@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="WebAuction" transaction-type="JTA">
+		<jta-data-source>jdbc/WebAuctionResource</jta-data-source>
+		<class>model.user.User</class>
+		<class>model.item.Item</class>
+		<class>model.auction.Auction</class>
+		<class>model.auction.AuctionItem</class>
+		<class>model.bid.Bid</class>
+		<class>model.bid.BidHistory</class>
+		<class>model.category.Category</class>
+	</persistence-unit>
+</persistence>
