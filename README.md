@@ -1,4 +1,4 @@
-CS7081 Enterprise Software Components and Systems Development 2018
+# Web Auction Application
 
 A auctioning system with a backend database and a Web front-end (mini-eBay).
 
