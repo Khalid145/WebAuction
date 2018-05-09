@@ -42,7 +42,7 @@
         <ul class="nav navbar-nav navbar-right">
         <% String userlayout = "";
             if(session.getAttribute("userid") == null) {
-            	userlayout = "<li><a href='#'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li><li><a href='login.jsp'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
+            	userlayout = "<li><a href='LoginBuffer'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
             }else{
             	userlayout = "<li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' href='MyDetails'>My Profile <span class='caret'></span></a><ul class='dropdown-menu'><li><a href='MyDetails'>My Details</a></li><li><a href='CreateAuction'>Create an Auction</a></li><li><a href='MyAuction'>My Auctions</a></li><li><a href='LogOut'>Log Out</a></li></ul></li>";
             }
@@ -60,15 +60,16 @@
 		<%
             String message = (String) request.getAttribute("message");
             if (message != null) {
-                out.println("<font color='red'>" + message + "</font><br></br>");
+                out.println("<h3 align='center' class='text-danger'>" + message + "</h3>");
             }
            %>
 	</center>
+	</div>
 
-
+<div class="container">
       <form class="form-signin" action="LoginController" method="POST">
         <h2 class="form-signin-heading" align="center">Log in</h2>
-        <p align="center" class="text-danger">Note: You must be logged in before you can place a bid on any auction.</p>
+        <p align="center" class="text-warning">Note: You must be logged in before you can place a bid on any auction.</p>
         <label for="input" class="sr-only">Username</label>
         <input type="text" name="username" class="form-control" placeholder="Username" required="true" autofocus="">
         <label for="inputPassword" class="sr-only">Password</label>

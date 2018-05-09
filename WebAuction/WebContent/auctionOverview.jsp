@@ -45,9 +45,12 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
         <% String userlayout = "";
+        String userNote = "";
             if(session.getAttribute("userid") == null) {
-            	userlayout = "<li><a href='#'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li><li><a href='login.jsp'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
+            	userNote = "<h3 align='center' class='text-danger'>Note: Only logged in users are able to bid.</h3> ";
+            	userlayout = "<li><a href='LoginBuffer'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>";
             }else{
+            	userNote = "";
             	userlayout = "<li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' href='MyDetails'>My Profile <span class='caret'></span></a><ul class='dropdown-menu'><li><a href='MyDetails'>My Details</a></li><li><a href='CreateAuction'>Create an Auction</a></li><li><a href='MyAuction'>My Auctions</a></li><li><a href='LogOut'>Log Out</a></li></ul></li>";
             }
             %>
@@ -60,7 +63,7 @@
 
 <div class="container">
   <h2>Auction Overview</h2>
-  <p class="text-danger">Note: Only logged in users are able to bid.</p>            
+  <%out.print(userNote); %>
   <table class="table table-hover">
     <thead>
       <tr>

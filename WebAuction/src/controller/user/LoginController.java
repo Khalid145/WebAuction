@@ -107,7 +107,7 @@ public class LoginController extends HttpServlet {
     			dispatcher.forward(request, response);
 			} catch (WebAuctionException ex) {
 				request.setAttribute("message", ex.getMessage());
-				RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("LoginBuffer");
 				dispatcher.forward(request, response);
 			};
 		}else if (path.equals("/LogOut")){
