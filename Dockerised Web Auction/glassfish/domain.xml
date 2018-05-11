@@ -163,8 +163,8 @@
       <property name="UseReadAheadInput" value="true"></property>
       <property name="ParseInfoCacheFactory" value="com.mysql.jdbc.PerConnectionLRUFactory"></property>
       <property name="DefaultFetchSize" value="0"></property>
-      <property name="URL" value="jdbc:mysql://192.168.99.100:3306/WebAuction"></property>
-      <property name="Url" value="jdbc:mysql://192.168.99.100:3306/WebAuction"></property>
+      <property name="URL" value="jdbc:mysql://172.17.0.1:3306/WebAuction"></property>
+      <property name="Url" value="jdbc:mysql://172.17.0.1:3306/WebAuction"></property>
       <property name="AllowMasterDownConnections" value="false"></property>
       <property name="CacheDefaultTimezone" value="true"></property>
       <property name="QueriesBeforeRetryMaster" value="50"></property>

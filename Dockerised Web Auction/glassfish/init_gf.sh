@@ -10,7 +10,6 @@ echo "AS_ADMIN_PASSWORD=password" >> /home/gf-password.txt
 asadmin --user=admin --passwordfile=/home/gf-password.txt enable-secure-admin
 rm /home/gf-password.txt
 asadmin enable-secure-admin --port 4848
-asadmin deploy -s --contextroot WebAuction WebAuction.war
 asadmin --user=admin stop-domain
 # finally start db and glassfish
 asadmin start-database
