@@ -77,7 +77,7 @@ public class AuctionModelImpl implements AuctionModel{
     
     public void deleteAuction(String itemid) throws WebAuctionException {
     	/* REPLACE DEL OPERATION WITH JPA VERSION*/
-    	 int query = emgr.createNativeQuery("DELETE Auction, Item FROM Auction INNER JOIN  Item  on Auction.itemId = Item.itemid WHERE  Auction.itemId='" + itemid + "'").executeUpdate();
+    	 int query = emgr.createNativeQuery("DELETE Bid, Auction, Item FROM Auction INNER JOIN Bid on Auction.auctionId= Bid.auctionId INNER JOIN  Item  on Auction.itemId = Item.itemid WHERE  Auction.itemId='" + itemid + "'").executeUpdate();
     	 System.out.println("AAAAAA: " + query);
     }
     

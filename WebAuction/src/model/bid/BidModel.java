@@ -8,5 +8,10 @@ public interface BidModel {
 	
 	 public BidHistory[] getBidHistory(String id)
 			 throws WebAuctionException; 
+	 
+	 
+	
+	 public void deleteAuction(String auctionid)
+	            throws WebAuctionException;
 
 }

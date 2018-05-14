@@ -41,6 +41,14 @@ public BidHistory[] getBidHistory(String id) throws WebAuctionException {
 	System.out.println("PPPPPPPPPPP: " + auctions);
 	return (BidHistory[]) auctions.toArray(new BidHistory[0]);
 }
+
+
+
+@Override
+public void deleteAuction(String auctionid) throws WebAuctionException {
+	// TODO Auto-generated method stub
+	
+}
  
  
 
